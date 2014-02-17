@@ -589,7 +589,7 @@ static char UIScrollViewPullToRefreshView;
 #pragma mark -
 
 - (void)triggerRefresh {
-    // [self.scrollView triggerPullToRefresh];
+    [self.webView triggerPullToRefresh];
 }
 
 - (void)startAnimating{
