@@ -144,7 +144,7 @@ UIEdgeInsets scrollViewOriginalContentInsets;
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     if (self.superview && newSuperview == nil) {
         UIWebView *webView = (UIWebView *)self.superview;
-        if (webView.showsInfiniteScrolling) {
+        if (self.webView != nil && webView.showsInfiniteScrolling) {
           if (self.isObserving) {
             [webView removeObserver:self forKeyPath:@"contentOffset"];
             [webView removeObserver:self forKeyPath:@"contentSize"];

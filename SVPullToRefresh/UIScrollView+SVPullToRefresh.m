@@ -198,7 +198,10 @@ static char UIScrollViewPullToRefreshView;
     if (self.superview && newSuperview == nil) {
         //use self.superview, not self.scrollView. Why self.scrollView == nil here?
         UIWebView *scrollView = (UIScrollView *)self.superview;
-        if (scrollView.showsPullToRefresh) {
+        
+        
+        
+        if (self.webView != nil && scrollView.showsPullToRefresh) {
             if (self.isObserving) {
                 //If enter this branch, it is the moment just before "SVPullToRefreshView's dealloc", so remove observer here
                 [scrollView removeObserver:self forKeyPath:@"contentOffset"];
