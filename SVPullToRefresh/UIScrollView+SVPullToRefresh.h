@@ -13,7 +13,7 @@
 
 @class SVPullToRefreshView;
 
-@interface UIScrollView (SVPullToRefresh)
+@interface UIWebView (SVPullToRefresh)
 
 typedef NS_ENUM(NSUInteger, SVPullToRefreshPosition) {
     SVPullToRefreshPositionTop = 0,
