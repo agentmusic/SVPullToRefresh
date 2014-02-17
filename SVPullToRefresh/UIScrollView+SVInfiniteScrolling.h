@@ -11,7 +11,7 @@
 
 @class SVInfiniteScrollingView;
 
-@interface UIScrollView (SVInfiniteScrolling)
+@interface UIWebView (SVInfiniteScrolling)
 
 - (void)addInfiniteScrollingWithActionHandler:(void (^)(void))actionHandler;
 - (void)triggerInfiniteScrolling;
