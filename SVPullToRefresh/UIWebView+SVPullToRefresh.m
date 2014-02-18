@@ -441,13 +441,13 @@ static char UIScrollViewPullToRefreshViewBottom;
         
         if(!self.webView.scrollView.isDragging && self.state == SVPullToRefreshStateTriggered)
             self.state = SVPullToRefreshStateLoading;
-        else if(contentOffset.y < scrollOffsetThreshold && self.webView.scrollView.isDragging && self.state == SVPullToRefreshStateStopped && self.position == SVPullToRefreshPositionTop)
+        else if(contentOffset.y < scrollOffsetThreshold+10 && self.webView.scrollView.isDragging && self.state == SVPullToRefreshStateStopped && self.position == SVPullToRefreshPositionTop)
             self.state = SVPullToRefreshStateTriggered;
-        else if(contentOffset.y >= scrollOffsetThreshold && self.state != SVPullToRefreshStateStopped && self.position == SVPullToRefreshPositionTop)
+        else if(contentOffset.y >= scrollOffsetThreshold+10 && self.state != SVPullToRefreshStateStopped && self.position == SVPullToRefreshPositionTop)
             self.state = SVPullToRefreshStateStopped;
-        else if(contentOffset.y > scrollOffsetThreshold && self.webView.scrollView.isDragging && self.state == SVPullToRefreshStateStopped && self.position == SVPullToRefreshPositionBottom)
+        else if(contentOffset.y > scrollOffsetThreshold+10 && self.webView.scrollView.isDragging && self.state == SVPullToRefreshStateStopped && self.position == SVPullToRefreshPositionBottom)
             self.state = SVPullToRefreshStateTriggered;
-        else if(contentOffset.y <= scrollOffsetThreshold && self.state != SVPullToRefreshStateStopped && self.position == SVPullToRefreshPositionBottom)
+        else if(contentOffset.y <= scrollOffsetThreshold+10 && self.state != SVPullToRefreshStateStopped && self.position == SVPullToRefreshPositionBottom)
             self.state = SVPullToRefreshStateStopped;
     } else {
         CGFloat offset;
