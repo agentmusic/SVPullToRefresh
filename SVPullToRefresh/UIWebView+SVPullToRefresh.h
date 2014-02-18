@@ -1,5 +1,5 @@
 //
-// UIScrollView+SVPullToRefresh.h
+// UIWebView+SVPullToRefresh.h
 //
 // Created by Sam Vermette on 23.04.12.
 // Copyright (c) 2012 samvermette.com. All rights reserved.

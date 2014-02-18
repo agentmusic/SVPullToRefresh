@@ -1,5 +1,5 @@
 //
-// UIScrollView+SVPullToRefresh.m
+// UIWebView+SVPullToRefresh.m
 //
 // Created by Sam Vermette on 23.04.12.
 // Copyright (c) 2012 samvermette.com. All rights reserved.
@@ -8,7 +8,7 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import "UIScrollView+SVPullToRefresh.h"
+#import "UIWebView+SVPullToRefresh.h"
 
 //fequal() and fequalzro() from http://stackoverflow.com/a/1614761/184130
 #define fequal(a,b) (fabs((a) - (b)) < FLT_EPSILON)
