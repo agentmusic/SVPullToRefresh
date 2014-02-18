@@ -38,7 +38,7 @@ static CGFloat const SVPullToRefreshViewHeight = 60;
 @property (nonatomic, strong) NSMutableArray *subtitles;
 @property (nonatomic, strong) NSMutableArray *viewForState;
 
-@property (nonatomic, weak) UIWebView *webView;
+@property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, readwrite) CGFloat originalTopInset;
 @property (nonatomic, readwrite) CGFloat originalBottomInset;
 
@@ -228,8 +228,8 @@ static char UIScrollViewPullToRefreshViewBottom;
         UIWebView *scrollView = (UIScrollView *)self.superview;
         
         
-        
-        if (self.webView != nil && scrollView.showsPullToRefresh) {
+        if ([scrollView showsPullToRefreshWithPosition:SVPullToRefreshPositionTop]) {
+       // if (self.webView != nil && scrollView.showsPullToRefresh) {
             if (self.isObserving) {
                 //If enter this branch, it is the moment just before "SVPullToRefreshView's dealloc", so remove observer here
                 [scrollView removeObserver:self forKeyPath:@"contentOffset"];
