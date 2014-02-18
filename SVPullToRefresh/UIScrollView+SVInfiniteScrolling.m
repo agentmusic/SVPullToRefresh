@@ -173,13 +173,20 @@ UIEdgeInsets scrollViewOriginalContentInsets;
 }
 
 - (void)setScrollViewContentInset:(UIEdgeInsets)contentInset {
+    
+    id debug = self.webView.scrollView;
+    self.webView.scrollView.contentInset ;
+    self.webView.scrollView.contentInset = contentInset;
+    
+    /*
     [UIView animateWithDuration:0.3
                           delay:0
                         options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
-                         self.webView.scrollView.contentInset = contentInset;
+            
                      }
                      completion:NULL];
+    */
 }
 
 #pragma mark - Observing
