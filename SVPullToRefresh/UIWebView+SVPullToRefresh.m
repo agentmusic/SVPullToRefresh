@@ -235,6 +235,7 @@ static char UIScrollViewPullToRefreshViewBottom;
                 [scrollView removeObserver:self forKeyPath:@"contentOffset"];
                 [scrollView removeObserver:self forKeyPath:@"contentSize"];
                 [scrollView removeObserver:self forKeyPath:@"frame"];
+                self.webView = nil;
                 self.isObserving = NO;
             }
         }
